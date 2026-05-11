@@ -1,0 +1,25 @@
+<ul class="postList">
+  {{ for post of postslist }}
+  <li class="post">
+    <h2 class="post-title">
+      <a href="{{ post.url }}" {{ if post.url == url }} aria-current="page"{{ /if }}>
+        {{ post.title || post.url }}
+      </a>
+    </h2>
+
+    {{ include "templates/post-details.vto" {
+      date: post.date,
+      author: post.author,
+      readingInfo: post.readingInfo
+    } }}
+
+    {{ if post.tags?.length }}
+    <div class="post-tags">
+      {{ for tag of post.tags }}
+        <span class="badge">{{ tag }}</span>
+      {{ /for }}
+    </div>
+    {{ /if }}
+  </li>
+  {{ /for }}
+</ul>

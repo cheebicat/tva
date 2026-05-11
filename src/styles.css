@@ -1,0 +1,120 @@
+/* Lume's design system */
+@import "https://unpkg.com/@lumeland/ds@0.5.2/ds.css";
+
+/* Custom components */
+@import "css/navbar.css";
+@import "css/page.css";
+@import "css/post-list.css";
+@import "css/post.css";
+@import "css/comments.css";
+
+/* Make the links black */
+:root {
+  --color-link: var(--color-base);
+  --color-link-hover: var(--color-dim);
+}
+
+/* Page layout */
+main {
+  padding: var(--row-gap-medium) 0;
+  max-width: min(100% - 15vw, 45em);
+  margin: 0 auto;
+  background-color: #717185d9;
+  padding: 2rem;
+  border-radius: 0 0 8px 8px;
+
+  & > :first-child {
+    margin-top: 0;
+  }
+}
+
+/* Search tweak */
+.search {
+  margin-top: var(--row-gap-xsmall);
+}
+
+body {
+  background-color: #000000;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%237185d9' fill-opacity='0.15' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+  min-height: 100vh;
+}
+
+[data-theme=dark] {
+  --color-base: #ffffff;        /* main text - bright white */
+  --color-text: #e0e0e0;        /* body text - slightly off white */
+  --color-dim: #aaaaaa;         /* secondary text like dates/author */
+  --color-link: #ff9ec4;        /* links - pick any color you like */
+  --color-link-hover: #ffcce0;  /* link hover */
+  --color-line: rgba(255,255,255,0.2); /* divider lines */
+}
+
+[data-theme=light] {
+  --color-background: rgba(255, 255, 255, 0.85);
+  --color-base: #1a1a1a;
+  --color-text: #2a2a2a;
+  --color-dim: #555555;
+  --color-link: #c41230;
+  --color-link-hover: #8a0d21;
+  --color-line: rgba(0, 0, 0, 0.15);
+}
+
+[data-theme=light] main {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+[data-theme=light] nav.navbar {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.tag {
+  color: #ffffff;
+  border-color: rgba(255,255,255,0.4);
+}
+
+.navbar {
+  background-color: #717185d9;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav.navbar {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  background-color: #717185d9;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(20, 24, 31, 0.85) !important;
+  padding: 1rem 2rem !important;
+  max-width: min(100% - 15vw, 45em) !important;
+  margin: 0 auto !important;
+  box-sizing: border-box !important;
+  border-radius: 8px 8px 0 0 !important;
+  justify-content: space-between !important;
+}
+
+nav.navbar ul {
+  display: flex !important;
+  flex-direction: row !important;
+  list-style: none !important;
+  padding: 0 !important;
+  margin-left: auto !important;
+  gap: 1.5rem;
+}
+
+nav.navbar ul li {
+  display: flex !important;
+  list-style-type: none !important;
+}
+
+nav.navbar ul li::marker {
+  content: "" !important;
+}
+
+audio {
+  width: 100%;
+  border-radius: 8px;
+  margin: 1rem 0;
+}

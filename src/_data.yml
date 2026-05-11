@@ -1,0 +1,20 @@
+lang: en
+
+logo: '<div style="display:flex; align-items:center; gap:1rem;"><img src="/umbc.png" alt="UMBC" height="60"><strong style="font-size:1.2rem;">Trans Voice Archive</strong></div>'
+
+
+home:
+  welcome: ᨐฅ Welcome
+  description: This website is a small work in progress, colors and theme are subject to change!
+
+menu_links: []
+extra_head: []
+
+# Metas plugin https://lume.land/plugins/metas/#description
+metas:
+  site: Trans Voice Archive
+  description: 
+  title: "=title"
+  image: "=image"
+  twitter: "@username"
+  lang: en
